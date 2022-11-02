@@ -1,1 +1,1 @@
-https://raw.githubusercontent.com/Manticore-EX/yea/main/Documentation.md
+https://github.com/Manticore-EX/yea/main/Documentation.md
