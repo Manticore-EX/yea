@@ -25,24 +25,23 @@ Manticore will now automatically save and load your configuration
 ## Themes For Window
 coming soon but will release some of the sneak peeks
 themes
---[[
 Manticore
-BloodTheme
-Sentinel
-Synapse
-ScriptWare - SW
-Subaru
-Midnight
-Ocean
-Carbon
-Monokai
-Snow
-contrast
-classic
-ManticoreVPN - MVPN
-Proton
-Legacy
-]]
+,BloodTheme
+,Sentinel
+,Synapse
+,ScriptWare - SW
+,Subaru
+,Midnight
+,Ocean
+,Carbon
+,Monokai
+,Snow
+,contrast
+,classic
+,ManticoreVPN - MVPN
+,Proton
+,Legacy
+
 
 
 ## Creating a Window
