@@ -23,6 +23,27 @@ Manticore will now use Secure Mode and attempt to reduce detection
 Manticore will now automatically save and load your configuration
 
 ## Themes For Window
+coming soon but will release some of the sneak peeks
+themes
+--[[
+Manticore
+BloodTheme
+Sentinel
+Synapse
+ScriptWare - SW
+Subaru
+Midnight
+Ocean
+Carbon
+Monokai
+Snow
+contrast
+classic
+ManticoreVPN - MVPN
+Proton
+Legacy
+]]
+
 
 ## Creating a Window
 ```lua
@@ -30,7 +51,7 @@ local Window = Manticore:CreateWindow({
 	Name = "Manticore Example Window",
 	LoadingTitle = "Manticore V1",
 	LoadingSubtitle = "by frayray9090",
-	Theme = "",
+	--Theme = "",
 	ConfigurationSaving = {
 		Enabled = true,
 		FileName = "Man Hub"
