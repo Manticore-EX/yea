@@ -4,7 +4,7 @@ still update the code this is not the only version we are still updating this
 
 ## Booting the Library
 ```lua
-local Manticore = loadstring(game:HttpGet('https://raw.githubusercontent.com/shlexware/Manticore/main/source'))()
+local Manticore = loadstring(game:HttpGet('https://raw.githubusercontent.com/Manticore-EX/yea/main/source.lua'))()
 ```
 
 ### Secure Mode
