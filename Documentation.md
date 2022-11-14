@@ -35,12 +35,12 @@ local Window = Manticore:CreateWindow({
 	},
         Discord = {
         	Enabled = false,
-        	Invite = "sirius", -- The Discord invite code, do not include discord.gg/
+        	Invite = "Manticore", -- The Discord invite code, do not include discord.gg/
         	RememberJoins = true -- Set this to false to make them join the discord every time they load it up
         },
 	KeySystem = true, -- Set this to true to use our key system
 	KeySettings = {
-		Title = "Sirius Hub",
+		Title = Manticore Hub",
 		Subtitle = "Key System",
 		Note = "Join the discord (not up at the moment we are making one tho)",
 		FileName = "ManticoreKey",
