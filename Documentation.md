@@ -8,10 +8,10 @@ local Manticore = loadstring(game:HttpGet('https://raw.githubusercontent.com/Man
 ```
 
 ### Secure Mode
-If the game you're trying to run Manticore V1 on, is detecting or crashing when you use Manticore V1, try using Secure Mode:
-- Place `getgenv().SecureMode = true` above the initial Manticore loadstring
+If the game you're trying to run Rayfield Interface Suite on, is detecting or crashing when you use Rayfield Interface Suite, try using Secure Mode:
+- Place `getgenv().SecureMode = true` above the initial Rayfield loadstring
 
-Manticore will now use Secure Mode and attempt to reduce detection
+Rayfield will now use Secure Mode and attempt to reduce detection
 - Note: This may cause some elements of the UI to look lower quality or may increase loading times slightly
 
 ### Enabling Configuration Saving
@@ -20,39 +20,40 @@ Manticore will now use Secure Mode and attempt to reduce detection
 - Choose an unique flag identifier for each supported element you create
 - Place `Manticore:LoadConfiguration()` at the bottom of all your code
 
-Manticore will now automatically save and load your configuration
-
-## Themes For Window
-coming soon but will release some of the sneak peeks
-themes
-| Manticore | BloodTheme | Sentinel | Synapse | ScriptWare - SW | Subaru | Midnight | Ocean | Carbon | Monokai | Snow | Contrast | Classic | ManticoreVPN - MVPN | Proton | Legacy |
-
-
+Rayfield will now automatically save and load your configuration
 
 ## Creating a Window
 ```lua
 local Window = Manticore:CreateWindow({
 	Name = "Manticore Example Window",
-	LoadingTitle = "Manticore V1",
-	LoadingSubtitle = "by frayray9090",
-	--Theme = "",
+	LoadingTitle = "Manticore",
+	LoadingSubtitle = "by espero",
 	ConfigurationSaving = {
 		Enabled = true,
-		FileName = "Man Hub"
+		FolderName = nil,
+		FileName = "Big Hub"
 	},
-	KeySystem = false, -- Set this to true to use our key system
+        Discord = {
+        	Enabled = false,
+        	Invite = "sirius", -- The Discord invite code, do not include discord.gg/
+        	RememberJoins = true -- Set this to false to make them join the discord every time they load it up
+        },
+	KeySystem = true, -- Set this to true to use our key system
 	KeySettings = {
-		Title = "Man Hub",
+		Title = "Sirius Hub",
 		Subtitle = "Key System",
-		Note = "note goes here",
-		Key = "Ky"
+		Note = "Join the discord (not up at the moment we are making one tho)",
+		FileName = "ManticoreKey",
+		SaveKey = true,
+		GrabKeyFromSite = false, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
+		Key = "Hello"
 	}
 })
 ```
 
 ## Creating a Tab
 ```lua
-local Tab = Window:CreateTab("Tab Example")
+local Tab = Window:CreateTab("Tab Example", 4483362458) -- Title, Image
 ```
 
 ## Creating a Section
@@ -66,7 +67,20 @@ Section:Set("Section Example")
 
 ## Notifying the user
 ```lua
-Manticore:Notify("Title Example","Content/Description Example",10010348543) -- (t,c,image)
+Manticore:Notify({
+    Title = "Notification Title",
+    Content = "Notification Content",
+    Duration = 6.5,
+    Image = 4483362458,
+    Actions = { -- Notification Buttons
+        Ignore = {
+            Name = "Okay!",
+            Callback = function()
+                print("The user tapped Okay!")
+            end
+		},
+	},
+})
 ```
 
 ## Creating a Button
@@ -101,7 +115,7 @@ Toggle:Set(false)
 ```
 
 ## Creating a Color Picker
-Not in Beta 4
+Coming Soon
 
 
 ## Creating a Slider
@@ -139,7 +153,7 @@ local Paragraph = Tab:CreateParagraph({Title = "Paragraph Example", Content = "P
 ```
 ### Updating a Paragraph
 ```lua
-Paragprah:Set({Title = "Paragraph Example", Content = "Paragraph Example"})
+Paragraph:Set({Title = "Paragraph Example", Content = "Paragraph Example"})
 ```
 
 ## Creating an Adaptive Input (TextBox)
@@ -193,9 +207,12 @@ local Dropdown = Tab:CreateDropdown({
 Dropdown:Set("Option 2") -- The new option value
 ```
 
+## Check the value of an existing element
+To check the current value of an existing element, using the variable, you can do `ElementName.CurrentValue`, if it's a keybind or dropdown, you will need to use `KeybindName.CurrentKeybind` or `DropdownName.CurrentOption`
+You can also check it via the flags from `Rayfield.Flags`
 
 
 ## Destroying the Interface
 ```lua
-Manticore:Destroy()
+Rayfield:Destroy()
 ```
